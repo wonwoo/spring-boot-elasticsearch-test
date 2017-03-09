@@ -2,7 +2,6 @@ package com.example.data;
 
 import java.util.Collections;
 import java.util.Set;
-
 import org.springframework.boot.test.autoconfigure.filter.AnnotationCustomizableTypeExcludeFilter;
 import org.springframework.context.annotation.ComponentScan.Filter;
 import org.springframework.core.annotation.AnnotatedElementUtils;

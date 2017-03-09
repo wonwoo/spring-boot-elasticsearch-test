@@ -1,6 +1,5 @@
 package com.example.data;
 
-import java.util.Objects;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 
@@ -12,6 +11,10 @@ public class ExampleDocument {
   @Id
   private String id;
   private String name;
+
+  ExampleDocument() {
+
+  }
 
   public ExampleDocument(String id, String name) {
     this.id = id;
