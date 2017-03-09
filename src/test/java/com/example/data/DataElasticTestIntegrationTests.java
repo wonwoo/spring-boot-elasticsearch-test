@@ -24,7 +24,7 @@ public class DataElasticTestIntegrationTests {
   private ElasticsearchTemplate elasticsearchTemplate;
 
   @Autowired
-  private SampleElasticsearchRepository sampleElasticsearchRepository;
+  private ExampleElasticsearchRepository sampleElasticsearchRepository;
 
   @Test
   public void elasticsearchTemplateIsNotNullTest() {

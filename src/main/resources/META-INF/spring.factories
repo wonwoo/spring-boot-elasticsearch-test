@@ -1,4 +1,4 @@
 com.example.data.AutoConfigureDataElastic=\
-  org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchAutoConfiguration,\
+  com.example.data.TestElasticsearchAutoConfiguration,\
   org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchDataAutoConfiguration,\
   org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchRepositoriesAutoConfiguration

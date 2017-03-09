@@ -5,5 +5,5 @@ import org.springframework.data.elasticsearch.repository.ElasticsearchRepository
 /**
  * Created by wonwoo on 2017. 3. 9..
  */
-public interface SampleElasticsearchRepository extends ElasticsearchRepository<ExampleDocument, String> {
+public interface ExampleElasticsearchRepository extends ElasticsearchRepository<ExampleDocument, String> {
 }
