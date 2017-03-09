@@ -1,5 +1,6 @@
 package com.example.data;
 
+import java.util.List;
 import java.util.UUID;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -36,14 +37,13 @@ public class DataElasticTestIntegrationTests {
     final ExampleDocument exampleDocument = sampleElasticsearchRepository.save(new ExampleDocument(id, "wonwoo"));
     assertThat(exampleDocument.getId()).isEqualTo(id);
     assertThat(exampleDocument.getName()).isEqualTo("wonwoo");
-
     SearchQuery searchQuery = new NativeSearchQueryBuilder()
       .withQuery(matchAllQuery())
       .withIndices("sample")
       .withTypes("history")
       .build();
-    long count = elasticsearchTemplate.count(searchQuery, ExampleDocument.class);
-    System.out.println(count);
+    final List<ExampleDocument> exampleDocuments = elasticsearchTemplate.queryForList(searchQuery, ExampleDocument.class);
+    assertThat(exampleDocuments).isNotEmpty();
   }
 
   @Test
